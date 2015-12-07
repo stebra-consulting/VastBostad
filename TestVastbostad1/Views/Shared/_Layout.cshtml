@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    @*<link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />*@
+    <link href="~/Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+
+        <div style="float:right; padding:10px; font-size: 24px !important;">
+            <span class="glyphicon glyphicon-search" style="color:white"></span>
+            <span class="glyphicon glyphicon-user" style="color:white"></span>
+        </div>
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+            </button>
+
+            <a href='@Url.Action("Home", "Start")'>
+                <img src='@Url.Content("~/Images/Västbostad logga green.jpg")' style="width:125px" />
+            </a>
+
+        </div>
+
+
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Bostäder", "Bostader", "Start")</li>
+                <li>@Html.ActionLink("Lokaler", "Lokaler", "Start")</li>
+                <li>@Html.ActionLink("Västbostad", "About", "Start")</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer></footer>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
